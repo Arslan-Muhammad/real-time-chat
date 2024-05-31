@@ -10,7 +10,7 @@ export interface Chat {
 export abstract class Store {
   constructor() {}
   initRoom(roomId: string) {}
-  getChats(room: string, limit: number, offset: number) {}
-  addChats(userId: string, name: string, room: string, message: string) {}
+  getChats(roomId: string, limit: number, offset: number) {}
+  addChats(userId: string, name: string, roomId: string, message: string) {}
   upVote(userId: string, room: string, chatId: string) {}
 }
