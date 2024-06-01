@@ -1,4 +1,4 @@
-import { Chat, Store } from "./store";
+import { Chat, Store } from "./Store";
 
 let globalChatId = 0;
 
