@@ -45,6 +45,7 @@ wsServer.on("request", function (request) {
   var connection = request.accept("echo-protocol", request.origin);
   console.log(new Date() + " Connection accepted.");
   connection.on("message", function (message) {
+    console.log(message);
     if (message.type === "utf8") {
       try {
         messageHandler(connection, JSON.parse(message.utf8Data));
