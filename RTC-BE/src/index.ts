@@ -73,6 +73,7 @@ function messageHandler(ws: connection, message: IncomingMessage) {
   if (message.type === SupportedMessage.SendMessage) {
     const payload = message.payload;
     const user = userManager.getUser(payload.roomId, payload.userId);
+    console.log(user);
     if (!user) {
       console.log("User not found!");
       return;
